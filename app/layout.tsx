@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
-	title: "2txt",
-	description: "Image to text, fast.",
+	title: "iOCR",
+	description: "Image to Text.",
 };
 
 const geistMono = Geist_Mono({
@@ -38,20 +38,12 @@ export default function RootLayout({
 
 				<footer className="lg:flex flex-row justify-between text-center text-sm dark:text-gray-400 text-gray-600 select-none">
 					<p>
-						<A href="https://github.com/ai-ng">ai-ng</A> /{" "}
-						<A href="https://nickoates.com">nick oates</A>
+						
+					<p>
+						Built with ❤️ by <A href="https://suresh.app">Suresh Kaleyannan	</A>
 					</p>
 					<p>
-						Built with <A href="https://sdk.vercel.ai">Vercel AI SDK</A> &{" "}
-						<A href="https://platform.openai.com/docs/models/gpt-4.1-nano">
-							GPT 4.1-nano
-						</A>
-					</p>
-					<p>
-						<A href="https://github.com/ai-ng/2txt">source</A> /{" "}
-						<A href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fai-ng%2F2txt&env=OPENAI_API_KEY&envDescription=Your%20OpenAI%20API%20key%20from%20platform.openai.com&envLink=https%3A%2F%2Fplatform.openai.com%2Fapi-keys&project-name=2txt&repository-name=2txt&demo-title=2txt&demo-description=Image%20to%20text%2C%20fast.&demo-url=https%3A%2F%2F2txt.vercel.app&demo-image=https%3A%2F%2F2txt.vercel.app%2Fopengraph-image.png">
-							deploy
-						</A>
+						Made in Malaysia
 					</p>
 				</footer>
 
