@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 	variable: "--font-mono",
 });
 
-export default function RootLayout({
-	children,
-}: Readonly<{
+type RootLayoutProps = {
 	children: React.ReactNode;
-}>) {
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en">
 			<body
@@ -28,7 +28,7 @@ export default function RootLayout({
 					"font-mono bg-gray-50 dark:bg-gray-950 text-black dark:text-white px-3 lg:px-10 py-4 lg:py-10 min-h-dvh flex flex-col"
 				)}
 			>
-				<h1 className="font-semibold text-center text-2xl bg-linear-to-b dark:from-gray-50 dark:to-gray-200 from-gray-950 to-gray-800 bg-clip-text text-transparent select-none">
+				<h1 className="font-semibold text-center text-2xl bg-gradient-to-b dark:from-gray-50 dark:to-gray-200 from-gray-950 to-gray-800 bg-clip-text text-transparent select-none">
 					iOCR
 				</h1>
 
@@ -37,13 +37,11 @@ export default function RootLayout({
 				</main>
 
 				<footer className="lg:flex flex-row justify-between text-center text-sm dark:text-gray-400 text-gray-600 select-none">
-						
 					<p>
-						Built with ❤️ by <A href="https://suresh.app">Suresh Kaleyannan	</A>
+						Built with ❤️ by{" "}
+						<A href="https://suresh.app">Suresh Kaleyannan</A>
 					</p>
-					<p>
-						Made in Malaysia
-					</p>
+					<p>Made in Malaysia</p>
 				</footer>
 
 				<Toaster richColors theme="system" />
@@ -53,8 +51,10 @@ export default function RootLayout({
 	);
 }
 
-function A(props: any) {
+function A(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
 	return (
-		<a {...props} className="text-black dark:text-white hover:underline" />
+		<a {...props} className="text-black dark:text-white hover:underline">
+			{props.children}
+		</a>
 	);
 }
