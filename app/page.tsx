@@ -140,7 +140,7 @@ export default function Home() {
 						<IconLoader2 className="animate-spin size-20" />
 					) : (
 						<>
-							<p className="font-bold mb-4">Turn Images into text Instantly with our AI-Powered OCR Tool</p>
+							<p className="font-bold mb-4 text-blue dark:text-blue">Turn Images into text Instantly <br>with our AI-Powered OCR Tool</p></br>
 							<p className="hidden [@media(hover:hover)]:block">
 								Drop or Paste Anywhere, or Click to Upload.
 							</p>
