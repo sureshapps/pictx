@@ -41,7 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					iOCR (Image to Text)
 				</h1>
 
-				<main className="grow flex flex-col lg:flex-row gap-6 py-4 lg:py-10 bg-gray-800 dark:bg-gray-800">
+				<main className="grow flex flex-col lg:flex-row gap-6 py-4 lg:py-10">
 					{children}
 
 					{/* Example button */}
