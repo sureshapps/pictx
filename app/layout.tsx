@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 export const metadata: Metadata = {
 	title: "iOCR",
-	description: "Image to Text.",
+	description: "Image to Text."
 };
 
 const geistMono = Geist_Mono({
