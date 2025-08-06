@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { GeistSans } from 'geist/font/sans';
+
+import { Roboto } from 'next/font/google';
+
+
 
 
 import "./globals.css";
@@ -15,9 +18,10 @@ export const metadata: Metadata = {
 	description: "Image to Text.",
 };
 
-const geistMono = Geist_Mono({
-	subsets: ["latin"],
-	variable: "--font-mono",
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  variable: "--font-roboto",
 });
 
 type RootLayoutProps = {
@@ -29,8 +33,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 		<html lang="en">
 			<body
 				className={clsx(
-					geistMono.variable,
-					"font-mono bg-gray-50 dark:bg-gray-950 text-black dark:text-white px-3 lg:px-10 py-4 lg:py-10 min-h-dvh flex flex-col"
+					roboto.variable,
+					"font-roboto bg-gray-50 dark:bg-gray-950 text-black dark:text-white px-3 lg:px-10 py-4 lg:py-10 min-h-dvh flex flex-col"
 				)}
 			>
 				<h1 className="font-semibold text-center text-2xl bg-gradient-to-b dark:from-gray-50 dark:to-gray-200 from-gray-950 to-gray-800 bg-clip-text text-transparent select-none">
