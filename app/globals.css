@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
-
+body {
+	background-color: #262626;
+	color: #f5f5f5;
+}
+	
+	
 
 button {
 	background-color: orange;
