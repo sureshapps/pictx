@@ -114,7 +114,8 @@ export default function Home() {
 					}
 				)}
 				onClick={() => inputRef.current?.click()}
-			>
+			
+		
 				{blobURL && (
 					<Image
 						src={blobURL}
@@ -132,11 +133,11 @@ export default function Home() {
 							"opacity-0 group-hover:opacity-100 transition ease-in-out": object?.description,
 						}
 					)}
-				>
+				
 					{isLoading ? (
 						<IconLoader2 className="animate-spin size-20" />
 					) : (
-						<>
+					
 							<p className="font-bold mb-4 text-blue dark:text-blue">
 								Turn Images into text Instantly <br /> with our AI-Powered OCR Tool
 							</p>
@@ -186,7 +187,7 @@ export default function Home() {
 						<button
 							onClick={copyBoth}
 							className="w-full lg:w-auto rounded-md underline hover:no-underline hover:bg-gray-800 dark:hover:bg-gray-800 flex items-center gap-2"
-						>
+						
 							<IconCopy className="size-4" /> Copy All
 						</button>
 					)}
