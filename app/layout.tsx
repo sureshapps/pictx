@@ -67,7 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
 function A(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
 	return (
-		<a {...props} className="text-red dark:text-red hover:underline">
+		<a {...props} className="text-white dark:text-white hover:underline">
 			{props.children}
 		</a>
 	);
