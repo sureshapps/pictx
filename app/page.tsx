@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Fragment } from "react";
 import clsx from "clsx";
 import { IconCopy, IconLoader2 } from "@tabler/icons-react";
 import { experimental_useObject as useObject } from "@ai-sdk/react";
@@ -102,100 +102,101 @@ export default function Home() {
 		toast.success("Copied to clipboard");
 	}
 
-	return (
-		
-			<div
-				className={clsx(
-					"rounded-lg border-4 drop-shadow-xs text-gray-50 dark:text-gray-50 cursor-pointer border-double transition-colors ease-in-out bg-gray-950 dark:bg-gray-950 relative group select-none grow pointer-events-none [@media(hover:hover)]:pointer-events-auto",
-					{
-						"border-orange-600 dark:border-orange-600 hover:border-orange-600 dark:hover:border-orange-700":
-							!isDraggingOver,
-						"border-blue-700 dark:border-blue-700": isDraggingOver,
-					}
-				)}
-				onClick={() => inputRef.current?.click()}
-			
-		
-				{blobURL && (
-					<Image
-						src={blobURL}
-						unoptimized
-						fill
-						className="lg:object-contain object-cover min-h-16"
-						alt="Uploaded image"
-					/>
-				)}
+return (
+        <Fragment>
+            <div
+                className={clsx(
+                    "rounded-lg border-4 drop-shadow-xs text-gray-50 dark:text-gray-50 cursor-pointer border-double transition-colors ease-in-out bg-gray-950 dark:bg-gray-950 relative group select-none grow pointer-events-none [@media(hover:hover)]:pointer-events-auto",
+                    {
+                        "border-orange-600 dark:border-orange-600 hover:border-orange-600 dark:hover:border-orange-700":
+                            !isDraggingOver,
+                        "border-blue-700 dark:border-blue-700": isDraggingOver,
+                    }
+                )}
+                onClick={() => inputRef.current?.click()}
+            >
+                {blobURL && (
+                    <Image
+                        src={blobURL}
+                        unoptimized
+                        fill
+                        className="lg:object-contain object-cover min-h-16"
+                        alt="Uploaded image"
+                    />
+                )}
 
-				<div
-					className={clsx(
-						"flex flex-col w-full h-full p-3 items-center justify-center text-center absolute bg-gray-100/70 dark:bg-gray-900/70 text-lg",
-						{
-							"opacity-0 group-hover:opacity-100 transition ease-in-out": object?.description,
-						}
-					)}
-				
-					{isLoading ? (
-						<IconLoader2 className="animate-spin size-20" />
-					) : (
-					
-							<p className="font-bold mb-4 text-blue dark:text-blue">
-								Turn Images into text Instantly <br /> with our AI-Powered OCR Tool
-							</p>
-							<p className="hidden [@media(hover:hover)]:block">
-								Drop or Paste Anywhere, or Click to Upload.
-							</p>
+                <div
+                    className={clsx(
+                        "flex flex-col w-full h-full p-3 items-center justify-center text-center absolute bg-gray-100/70 dark:bg-gray-900/70 text-lg",
+                        {
+                            "opacity-0 group-hover:opacity-100 transition ease-in-out": object?.description,
+                        }
+                    )}
+                >
+                    {isLoading ? (
+                        <IconLoader2 className="animate-spin size-20" />
+                    ) : (
+                        <Fragment>
+                            <p className="font-bold mb-4 text-blue dark:text-blue">
+                                Turn Images into text Instantly <br /> with our AI-Powered OCR Tool
+                            </p>
+                            <p className="hidden [@media(hover:hover)]:block">
+                                Drop or Paste Anywhere, or Click to Upload.
+                            </p>
 
-							<div className="w-56 space-y-4 [@media(hover:hover)]:hidden pointer-events-auto">
-								<button className="rounded-full w-full py-3 bg-black dark:bg-white text-white dark:text-black">
-									Upload Your Image
-								</button>
+                            <div className="w-56 space-y-4 [@media(hover:hover)]:hidden pointer-events-auto">
+                                <button className="rounded-full w-full py-3 bg-black dark:bg-white text-white dark:text-black">
+                                    Upload Your Image
+                                </button>
 
-								<input
-									type="text"
-									onKeyDown={(e) => e.preventDefault()}
-									placeholder="Hold to Paste"
-									onClick={(e) => e.stopPropagation()}
-									className="text-center w-full rounded-full py-3 bg-orange-300 dark:bg-orange-300 placeholder-orange dark:placeholder-orange focus:bg-orange dark:focus:bg-orange focus:placeholder-gray-950 dark:focus:placeholder-gray-950 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
-								/>
-							</div>
+                                <input
+                                    type="text"
+                                    onKeyDown={(e) => e.preventDefault()}
+                                    placeholder="Hold to Paste"
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="text-center w-full rounded-full py-3 bg-orange-300 dark:bg-orange-300 placeholder-orange dark:placeholder-orange focus:bg-orange dark:focus:bg-orange focus:placeholder-gray-950 dark:focus:placeholder-gray-950 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
+                                />
+                            </div>
 
-							<p className="text-sm mt-3 text-lime-400 dark:text-lime-400">
-								(We will Not Store Your Images)
-							</p>
-						</>
-					)}
-				</div>
+                            <p className="text-sm mt-3 text-lime-400 dark:text-lime-400">
+                                (We will Not Store Your Images)
+                            </p>
+                        </Fragment>
+                    )}
+                </div>
 
-				<input
-					type="file"
-					className="hidden"
-					ref={inputRef}
-					onChange={handleInputChange}
-					accept="image/jpeg, image/png, image/gif, image/webp"
-				/>
-			</div>
+                <input
+                    type="file"
+                    className="hidden"
+                    ref={inputRef}
+                    onChange={handleInputChange}
+                    accept="image/jpeg, image/png, image/gif, image/webp"
+                />
+            </div>
 
-			{(isLoading || object?.description) && (
-				<div className="space-y-3 basis-1/2 p-3 rounded-md bg-gray-900 dark:bg-gray-900 w-full drop-shadow-xs">
-					<Section finished={finished} content={object?.description}>
-						Description
-					</Section>
-					<Section finished={finished} content={object?.text}>
-						Text
-					</Section>
-					{finished && object?.text && (
-						<button
-							onClick={copyBoth}
-							className="w-full lg:w-auto rounded-md underline hover:no-underline hover:bg-gray-800 dark:hover:bg-gray-800 flex items-center gap-2"
-						
-							<IconCopy className="size-4" /> Copy All
-						</button>
-					)}
-				</div>
-			)}
-		</>
-	);
+            {(isLoading || object?.description) && (
+                <div className="space-y-3 basis-1/2 p-3 rounded-md bg-gray-900 dark:bg-gray-900 w-full drop-shadow-xs">
+                    <Section finished={finished} content={object?.description}>
+                        Description
+                    </Section>
+                    <Section finished={finished} content={object?.text}>
+                        Text
+                    </Section>
+                    {finished && object?.text && (
+                        <button
+                            onClick={copyBoth}
+                            className="w-full lg:w-auto rounded-md underline hover:no-underline hover:bg-gray-800 dark:hover:bg-gray-800 flex items-center gap-2"
+                        >
+                            <IconCopy className="size-4" /> Copy All
+                        </button>
+                    )}
+                </div>
+            )}
+        </Fragment>
+    );
 }
+		
+				
 
 function toBase64(file: File | Blob): Promise<string> {
 	return new Promise((resolve, reject) => {
