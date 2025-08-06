@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
-	title: "2txt",
-	description: "Image to text, fast.",
+	title: "iOCR",
+	description: "Image to Text.",
 };
 
 const geistMono = Geist_Mono({
