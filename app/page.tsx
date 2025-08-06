@@ -137,17 +137,17 @@ export default function Home() {
 					)}
 				>
 					{isLoading ? (
-						<IconLoader2 className="animate-spin size-12" />
+						<IconLoader2 className="animate-spin size-20" />
 					) : (
 						<>
-							<p className="font-bold mb-4">Image to Text...</p>
+							<p className="font-bold mb-4">Image to Text</p>
 							<p className="hidden [@media(hover:hover)]:block">
 								Drop or Paste Anywhere, or Click to Upload.
 							</p>
 
 							<div className="w-56 space-y-4 [@media(hover:hover)]:hidden pointer-events-auto">
 								<button className="rounded-full w-full py-3 bg-black dark:bg-white text-white dark:text-black">
-									Browse & Pick Your Image
+									Upload Your Image
 								</button>
 
 								<input
@@ -155,7 +155,7 @@ export default function Home() {
 									onKeyDown={(e) => e.preventDefault()}
 									placeholder="Hold to Paste"
 									onClick={(e) => e.stopPropagation()}
-									className="text-center w-full rounded-full py-3 bg-orange-800 dark:bg-orange-800 placeholder-black dark:placeholder-white focus:bg-black dark:focus:bg-black focus:placeholder-gray-300 dark:focus:placeholder-gray-300 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
+									className="text-center w-full rounded-full py-3 bg-orange-300 dark:bg-orange-300 placeholder-orange dark:placeholder-orange focus:bg-orange dark:focus:bg-orange focus:placeholder-gray-100 dark:focus:placeholder-gray-100 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
 								/>
 							</div>
 
