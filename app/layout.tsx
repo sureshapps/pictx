@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Geist_Sans } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
+
+
 import "./globals.css";
 
-import { ANTIQUE STORIES } from "https://fonts.cdnfonts.com/css/antique-stories";
+
                 
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react";
