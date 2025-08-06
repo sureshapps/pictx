@@ -37,11 +37,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					"font-roboto bg-gray-800 dark:bg-gray-800 text-white dark:text-white px-3 lg:px-10 py-4 lg:py-10 min-h-dvh flex flex-col"
 				)}
 			>
-				<h1 className="font-semibold text-center text-2xl bg-gradient-to-b dark:from-gray-50 dark:to-gray-200 from-gray-950 to-gray-800 bg-clip-text text-transparent select-none">
+				<h1 className="font-semibold text-center text-2xl bg-gradient-to-b dark:from-gray-800 dark:to-gray-800 from-gray-800 to-gray-800 bg-clip-text text-transparent select-none">
 					iOCR (Image to Text)
 				</h1>
 
-				<main className="grow flex flex-col lg:flex-row gap-6 py-4 lg:py-10">
+				<main className="grow flex flex-col lg:flex-row gap-6 py-4 lg:py-10 bg-gray-800 dark:bg-gray-800">
 					{children}
 
 					{/* Example button */}
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
 function A(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
 	return (
-		<a {...props} className="text-black dark:text-white hover:underline">
+		<a {...props} className="text-red dark:text-red hover:underline">
 			{props.children}
 		</a>
 	);
