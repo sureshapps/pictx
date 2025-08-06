@@ -29,7 +29,7 @@ export default function RootLayout({
 				)}
 			>
 				<h1 className="font-semibold text-center text-2xl bg-linear-to-b dark:from-gray-50 dark:to-gray-200 from-gray-950 to-gray-800 bg-clip-text text-transparent select-none">
-					2txt
+					iOCR
 				</h1>
 
 				<main className="grow flex flex-col lg:flex-row gap-6 py-4 lg:py-10">
