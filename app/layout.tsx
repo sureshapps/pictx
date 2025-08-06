@@ -36,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					{children}
 
 					{/* Example button */}
-					<button className="bg-gray-800 text-white border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700 hover:border-orange-400 transition">
+					<button className="bg-orange-500 text-black border-2 border-gray-800 px-4 py-2 rounded hover:bg-orange-700 hover:border-gray-800 transition">
 						Convert Image
 					</button>
 				</main>
