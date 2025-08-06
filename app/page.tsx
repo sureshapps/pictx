@@ -108,11 +108,11 @@ export default function Home() {
 		<>
 			<div
 				className={clsx(
-					"rounded-lg border-4 drop-shadow-xs text-gray-700 dark:text-gray-300 cursor-pointer border-dashed transition-colors ease-in-out bg-gray-100 dark:bg-gray-900 relative group select-none grow pointer-events-none [@media(hover:hover)]:pointer-events-auto",
+					"rounded-lg border-4 drop-shadow-xs text-gray-50 dark:text-gray-50 cursor-pointer border-double transition-colors ease-in-out bg-gray-950 dark:bg-gray-950 relative group select-none grow pointer-events-none [@media(hover:hover)]:pointer-events-auto",
 					{
-						"border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700":
+						"border-orange-600 dark:border-orange-600 hover:border-orange-600 dark:hover:border-orange-700":
 							!isDraggingOver,
-						"border-blue-300 dark:border-blue-700": isDraggingOver,
+						"border-blue-700 dark:border-blue-700": isDraggingOver,
 					}
 				)}
 				onClick={() => inputRef.current?.click()}
@@ -140,27 +140,27 @@ export default function Home() {
 						<IconLoader2 className="animate-spin size-12" />
 					) : (
 						<>
-							<p className="font-bold mb-4">Image to text, fast.</p>
+							<p className="font-bold mb-4">Image to Text...</p>
 							<p className="hidden [@media(hover:hover)]:block">
-								Drop or paste anywhere, or click to upload.
+								Drop or Paste Anywhere, or Click to Upload.
 							</p>
 
 							<div className="w-56 space-y-4 [@media(hover:hover)]:hidden pointer-events-auto">
 								<button className="rounded-full w-full py-3 bg-black dark:bg-white text-white dark:text-black">
-									Tap to upload
+									Browse & Pick Your Image
 								</button>
 
 								<input
 									type="text"
 									onKeyDown={(e) => e.preventDefault()}
-									placeholder="Hold to paste"
+									placeholder="Hold to Paste"
 									onClick={(e) => e.stopPropagation()}
-									className="text-center w-full rounded-full py-3 bg-gray-200 dark:bg-gray-800 placeholder-black dark:placeholder-white focus:bg-white dark:focus:bg-black focus:placeholder-gray-700 dark:focus:placeholder-gray-300 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-blue-300 dark:focus:border-blue-700 border-transparent"
+									className="text-center w-full rounded-full py-3 bg-orange-800 dark:bg-orange-800 placeholder-black dark:placeholder-white focus:bg-black dark:focus:bg-black focus:placeholder-gray-300 dark:focus:placeholder-gray-300 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
 								/>
 							</div>
 
-							<p className="text-sm mt-3 text-gray-700 dark:text-gray-300">
-								(images are not stored)
+							<p className="text-sm mt-3 text-gray-200 dark:text-gray-200">
+								(We will Not Store Your Images)
 							</p>
 						</>
 					)}
@@ -176,7 +176,7 @@ export default function Home() {
 			</div>
 
 			{(isLoading || object?.description) && (
-				<div className="space-y-3 basis-1/2 p-3 rounded-md bg-gray-100 dark:bg-gray-900 w-full drop-shadow-xs">
+				<div className="space-y-3 basis-1/2 p-3 rounded-md bg-gray-900 dark:bg-gray-900 w-full drop-shadow-xs">
 					<Section finished={finished} content={object?.description}>
 						Description
 					</Section>
@@ -186,7 +186,7 @@ export default function Home() {
 					{finished && object?.text && (
 						<button
 							onClick={copyBoth}
-							className="w-full lg:w-auto rounded-md underline hover:no-underline hover:bg-gray-200 dark:hover:bg-gray-800 flex items-center gap-2"
+							className="w-full lg:w-auto rounded-md underline hover:no-underline hover:bg-gray-800 dark:hover:bg-gray-800 flex items-center gap-2"
 						>
 							<IconCopy className="size-4" /> Copy All
 						</button>
@@ -229,25 +229,25 @@ function Section({
 		<div>
 			{content && (
 				<button
-					className="float-right rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors ease-in-out"
+					className="float-right rounded-md p-1 hover:bg-gray-800 dark:hover:bg-gray-800 transition-colors ease-in-out"
 					onClick={copy}
 					aria-label="Copy to clipboard"
 				>
 					<IconCopy />
 				</button>
 			)}
-			<h2 className="font-semibold select-none text-gray-600 dark:text-gray-400">
+			<h2 className="font-semibold select-none text-gray-400 dark:text-gray-400">
 				{children}
 			</h2>
 
 			{loading && (
-				<div className="bg-gray-200 dark:bg-gray-800 animate-pulse rounded-sm w-full h-6" />
+				<div className="bg-gray-800 dark:bg-gray-800 animate-pulse rounded-sm w-full h-6" />
 			)}
 			{content && (
 				<p className="whitespace-pre-wrap break-words">{content.trim()}</p>
 			)}
 			{finished && !content && (
-				<p className="text-gray-600 dark:text-gray-400 select-none">
+				<p className="text-gray-400 dark:text-gray-400 select-none">
 					No text was found in that image.
 				</p>
 			)}
