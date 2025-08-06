@@ -103,7 +103,7 @@ export default function Home() {
 	}
 
 	return (
-		<>
+		
 			<div
 				className={clsx(
 					"rounded-lg border-4 drop-shadow-xs text-gray-50 dark:text-gray-50 cursor-pointer border-double transition-colors ease-in-out bg-gray-950 dark:bg-gray-950 relative group select-none grow pointer-events-none [@media(hover:hover)]:pointer-events-auto",
