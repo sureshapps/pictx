@@ -28,9 +28,7 @@ export default function Home() {
 		if (!file) return;
 
 		if (!isSupportedImageType(file.type)) {
-			return toast.error(
-				"Unsupported format. Only JPEG, PNG, GIF, and WEBP files are supported."
-			);
+			return toast.error("Unsupported format. Only JPEG, PNG, GIF, and WEBP files are supported.");
 		}
 
 		if (file.size > 4.5 * 1024 * 1024) {
@@ -83,7 +81,7 @@ export default function Home() {
 			removeEventListener("dragover", handleDragOver);
 			removeEventListener("dragleave", handleDragLeave);
 		};
-	});
+	}, []);
 
 	async function handlePaste(e: ClipboardEvent) {
 		track("Paste");
@@ -131,16 +129,17 @@ export default function Home() {
 					className={clsx(
 						"flex flex-col w-full h-full p-3 items-center justify-center text-center absolute bg-gray-100/70 dark:bg-gray-900/70 text-lg",
 						{
-							"opacity-0 group-hover:opacity-100 transition ease-in-out":
-								object?.description,
+							"opacity-0 group-hover:opacity-100 transition ease-in-out": object?.description,
 						}
 					)}
 				>
 					{isLoading ? (
 						<IconLoader2 className="animate-spin size-20" />
 					) : (
-						
-							<p className="font-bold mb-4 text-blue dark:text-blue">Turn Images into text Instantly <br>with our AI-Powered OCR Tool</p></br>
+						<>
+							<p className="font-bold mb-4 text-blue dark:text-blue">
+								Turn Images into text Instantly <br /> with our AI-Powered OCR Tool
+							</p>
 							<p className="hidden [@media(hover:hover)]:block">
 								Drop or Paste Anywhere, or Click to Upload.
 							</p>
