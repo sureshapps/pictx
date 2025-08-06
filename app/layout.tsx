@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Geist_Sans } from "next/font/google";
 import "./globals.css";
+
+import { ANTIQUE STORIES } from "https://fonts.cdnfonts.com/css/antique-stories";
+                
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
