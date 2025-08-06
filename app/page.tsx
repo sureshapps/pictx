@@ -140,7 +140,7 @@ export default function Home() {
 						<IconLoader2 className="animate-spin size-20" />
 					) : (
 						<>
-							<p className="font-bold mb-4">Image to Text</p>
+							<p className="font-bold mb-4">Turn Images into text Instantly with our AI-Powered OCR Tool</p>
 							<p className="hidden [@media(hover:hover)]:block">
 								Drop or Paste Anywhere, or Click to Upload.
 							</p>
@@ -155,7 +155,7 @@ export default function Home() {
 									onKeyDown={(e) => e.preventDefault()}
 									placeholder="Hold to Paste"
 									onClick={(e) => e.stopPropagation()}
-									className="text-center w-full rounded-full py-3 bg-orange-300 dark:bg-orange-300 placeholder-orange dark:placeholder-orange focus:bg-orange dark:focus:bg-orange focus:placeholder-gray-50 dark:focus:placeholder-gray-50 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
+									className="text-center w-full rounded-full py-3 bg-orange-300 dark:bg-orange-300 placeholder-orange dark:placeholder-orange focus:bg-orange dark:focus:bg-orange focus:placeholder-gray-950 dark:focus:placeholder-gray-950 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
 								/>
 							</div>
 
