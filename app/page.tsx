@@ -155,11 +155,11 @@ export default function Home() {
 									onKeyDown={(e) => e.preventDefault()}
 									placeholder="Hold to Paste"
 									onClick={(e) => e.stopPropagation()}
-									className="text-center w-full rounded-full py-3 bg-orange-300 dark:bg-orange-300 placeholder-orange dark:placeholder-orange focus:bg-orange dark:focus:bg-orange focus:placeholder-gray-100 dark:focus:placeholder-gray-100 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
+									className="text-center w-full rounded-full py-3 bg-orange-300 dark:bg-orange-300 placeholder-orange dark:placeholder-orange focus:bg-orange dark:focus:bg-orange focus:placeholder-gray-50 dark:focus:placeholder-gray-50 transition-colors ease-in-out focus:outline-hidden border-2 focus:border-gray-900 dark:focus:border-gray-900 border-transparent"
 								/>
 							</div>
 
-							<p className="text-sm mt-3 text-gray-200 dark:text-gray-200">
+							<p className="text-sm mt-3 text-lime-400 dark:text-lime-400">
 								(We will Not Store Your Images)
 							</p>
 						</>
