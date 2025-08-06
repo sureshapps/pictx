@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			<body
 				className={clsx(
 					roboto.variable,
-					"font-roboto bg-gray-50 dark:bg-gray-950 text-black dark:text-white px-3 lg:px-10 py-4 lg:py-10 min-h-dvh flex flex-col"
+					"font-roboto bg-gray-800 dark:bg-gray-800 text-white dark:text-white px-3 lg:px-10 py-4 lg:py-10 min-h-dvh flex flex-col"
 				)}
 			>
 				<h1 className="font-semibold text-center text-2xl bg-gradient-to-b dark:from-gray-50 dark:to-gray-200 from-gray-950 to-gray-800 bg-clip-text text-transparent select-none">
