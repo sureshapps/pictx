@@ -37,7 +37,6 @@ export default function RootLayout({
 				</main>
 
 				<footer className="lg:flex flex-row justify-between text-center text-sm dark:text-gray-400 text-gray-600 select-none">
-					<p>
 						
 					<p>
 						Built with ❤️ by <A href="https://suresh.app">Suresh Kaleyannan	</A>
