@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-@import url('https://fonts.cdnfonts.com/css/antique-stories');
 
 
 button {
@@ -37,7 +36,7 @@ h1 {
 	color: orange;
 	font-weight: 900;
 	font-size: 22px;
-        font-family: 'antique-stories', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
                                                 
 
 }
