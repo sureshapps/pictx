@@ -34,6 +34,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
 				<main className="grow flex flex-col lg:flex-row gap-6 py-4 lg:py-10">
 					{children}
+
+					{/* Example button */}
+					<button className="bg-gray-800 text-white border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700 hover:border-orange-400 transition">
+						Convert Image
+					</button>
 				</main>
 
 				<footer className="lg:flex flex-row justify-between text-center text-sm dark:text-gray-400 text-gray-600 select-none">
